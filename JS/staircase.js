@@ -28,3 +28,33 @@
 //  }
 //  return n?
 // }
+
+let n = 4;
+
+const staircase = (n) => {
+  for (let i = 1; i < n + 1; i += 1) {
+    console.log("#".repeat(i).padStart(n));
+  }
+};
+staircase(4);
+
+// REFLECTION
+// I learned about repeat and padStart today
+// repeat makes plenty of sense and can be very useful. I am not sure which method returns a new line.
+// padStart allows you to do just that, pad your current string with another until it reaches a given length
+// this seems mostly useful if you are doing something visual in the code
+// padStart by default uses spaces, but you can pass another argument and fill it with just about anything
+// both of these are string methods, but I did not need to convert the INT to STR to make it work
+// I wonder if you could use a HOF to do this as well
+
+// more research shows that padStart is useful for displaying credit card numbers
+// where you .slice the last 4 digits and pad the remainder with *
+// so this can be useful for security
+
+// this can also be useful for alignment when printing for a receipt or menu
+
+// this can also be used for reference id numbers in online stores
+// it can force a consistent number for each ref ID ad you can pad it with 0
+// it allows the user control over creating an ID, but keeps it consistent
+
+// https://medium.com/javascript-in-plain-english/3-practical-uses-of-padstart-and-padend-bc7f197d3e91
